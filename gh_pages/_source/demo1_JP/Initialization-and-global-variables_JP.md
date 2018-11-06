@@ -1,9 +1,12 @@
+<!--
 # Initialization and Global Variables
 >In this exercise, we will take a first look at the main application "pick_and_place_node.cpp", its public variables, and how to properly initialize it as a ros node.
+-->
 
 # 初期化とグローバル変数
-> メインアプリケーション "pick_and_place_node.cpp" のパブリック変数や ROS ノードとしてどのように適切に初期化されているのかを見てみます．
+> メインアプリケーション "pick_and_place_node.cpp" において，パブリック変数にどのようなものがあるのか，アプリケーションが ROS ノードとしてどのように適切に初期化されているのかを見てみます．
 
+<!--
 ## Application Variables
 
   In QT, open
@@ -40,6 +43,7 @@ The c++ class 'pick_and_place_config' defines public global variables used in va
 ```
 ROS_INFO_STREAM("world frame: " << application.cfg.WORLD_FRAME_ID)
 ```
+-->
 
 ## アプリケーション変数
 
@@ -72,21 +76,22 @@ C++ のクラス '''pick_and_place_config''' でパブリックグローバル�
     APPROACH_DISTANCE = 0.05f;
 ```
 
-メインプログラム '''pick_and_place_node.cpp''' においてグローバルオブジェクト `application` はメンバ '''cfg''' を通してプログラムの変数へのアクセスを提供しています．
-例えば '''WORLD_FRAME_ID''' を利用したい場合は次のように行います．
+メインプログラム `pick_and_place_node.cpp` において，グローバルオブジェクト `application` はメンバ `cfg` を通じてプログラムの変数へのアクセスを提供しています．
+例えば `WORLD_FRAME_ID` を利用したい場合は次のように行います．
 
 ```
 ROS_INFO_STREAM("world frame: " << application.cfg.WORLD_FRAME_ID)
 ```
 
+<!--
 ## Node Initialization
 
   In the '''pick_and_place_node.cpp''' file,  the following block of code in the "main" function initializes the '''!PickAndPlace''' application class and its main ros and MoveIt! components.
+-->
 
 ## ノードの初期化
 
-'''pick_and_place_node.cpp''' ファイルにおいて '''main''' 関数の次のコードが '''!PickAndPlace''' アプリケーションクラスとその ROS と MoveIt!
- コンポーネントを初期化しています．
+`pick_and_place_node.cpp` ファイルにおいて `main` 関数が `PickAndPlace` アプリケーションクラスとその ROS と MoveIt! コンポーネントを初期化しています．
 
 ```
 int main(int argc,char** argv)

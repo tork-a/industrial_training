@@ -1,15 +1,19 @@
+<!--
 # Initialize ROS
 >In this exercise, we'll initialize the ros components that our application needs in order to communicate to MoveIt! and other parts of the system.
+-->
 
 # ROS の初期化
 > MoveIt! とその他のシステムパートが通信できるように ROS コンポーネントの初期化を行います．
 
+<!--
 ## Locate Exercise Source File
 
   * Go to the main application source file located in '''plan_and_run/src/plan_and_run_node.cpp'''.
   * In the main program , locate the function call to '''application.initRos()'''.
   * Go to the source file for that function located in the '''plan_and_run/src/tasks/init_ros.cpp'''. Alternatively, in Eclipse you can click in any part of the function and press "F3" to bring up that file.
   * Comment out the first line containing the ```//ROS_ERROR_STREAM("Task '"<<__FUNCTION__ <<"' is incomplete. Exiting"); exit(-1);``` entry so that the function doesn't quit immediately.
+-->
 
 ## 演習用ソースファイル
 
@@ -19,6 +23,7 @@
   もしくは Qt/Eclipse で関数の任意の部分をクリックし "F3" を押すことによってその関数のソースファイルに移動します．
   * `//ROS_ERROR_STREAM("Task '"<<__FUNCTION__ <<"' is incomplete. Exiting"); exit(-1);` を含む最初の行をコメントアウトしてプログラムが直ちに終了しないようにしてください．
 
+<!--
 ## Complete Code
 
  * Observe how the ros Publisher '''marker_publisher_''' variable is initialized.  The node uses it to publish a ''visualization_msgs::!MarkerArray'' message for visualizing the trajectory in RViz.
@@ -27,6 +32,7 @@
  * Find comment block that starts with ```/*  Fill Code:``` and complete as described.
 
  * Replace every instance of ```[ COMPLETE HERE ]``` accordingly.
+-->
 
 ## コードを完成させる
 
@@ -35,6 +41,7 @@
  * `/*  Fill Code:` で始まるコメントブロックを見つけてそこにある記述どおりにコードを完成させてください．
  * 指示に従って `[ COMPLETE HERE ]` とある各部分を書き換えてください．
 
+<!--
 ## Build Code and Run
 
  * `cd` into your catkin workspace and run `catkin build`
@@ -42,6 +49,7 @@
 ```
 roslaunch plan_and_run demo_run.launch
 ```
+-->
 
 ## コードのビルドと実行
 
@@ -51,9 +59,8 @@ roslaunch plan_and_run demo_run.launch
 roslaunch plan_and_run demo_run.launch
 ```
 
-## API References
+<!-- ## API References -->
 ## API リファレンス
 
-[visualization_msgs::MarkerArray](http://docs.ros.org/api/visualization_msgs/html/msg/MarkerArray.html)
-
-[NodeHandle::serviceClient()](http://docs.ros.org/indigo/api/roscpp/html/classros_1_1NodeHandle.html#aa3376eeca609c4985255cecfaadcbcc5)
+* [visualization_msgs::MarkerArray](http://docs.ros.org/api/visualization_msgs/html/msg/MarkerArray.html)
+* [NodeHandle::serviceClient()](http://docs.ros.org/indigo/api/roscpp/html/classros_1_1NodeHandle.html#aa3376eeca609c4985255cecfaadcbcc5)

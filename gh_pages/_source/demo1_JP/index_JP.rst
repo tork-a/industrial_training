@@ -4,7 +4,7 @@ Application Demo 1 - Perception-Driven Manipulation
 .. toctree::
    :maxdepth: 2
 
-   Demo 1.0 - 序説 - 知覚情報をもとに動作するマニピュレーション <Introduction_JP.md>
+   Demo 1.0 - イントロダクション - 知覚情報をもとに動作するマニピュレーション <Introduction_JP.md>
    Demo 1.1 - ピック・アンド・プレース演習パッケージ <Inspect-the-package_JP.md>
    Demo 1.2 - パッケージのセットアップ <Package-Setup＿JP.md>
    Demo 1.3 - シミュレーションモードの開始 <Bring-up-ROS-system-in-simulation-mode_JP.md>

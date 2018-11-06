@@ -1,11 +1,14 @@
 # イントロダクション
 
+<!--
 ## Goal
  * This application will demonstrate how to use the various components in the Descartes library for planning and executing a robot path from a semi-constrained trajectory of points.  
+-->
 
 ## 目標
  * 本アプリケーションは準拘束軌道点群からなるロボット軌道の動作計画と実行を行うための直交座標系ライブラリの様々なコンポーネントを使う方法を実演します．
 
+<!--
 ## Objectives
  * Become familiar with the Descartes workflow.
  * Learn how to load a custom Descartes RobotModel.
@@ -13,6 +16,7 @@
  * Plan a robot path with a Descartes Planner.
  * Convert a Descartes Path into a MoveIt! message for execution.
  * Executing the path on the robot.
+-->
 
 ## 目的
  * 直交座標系ライブラリのワークフローに慣れる

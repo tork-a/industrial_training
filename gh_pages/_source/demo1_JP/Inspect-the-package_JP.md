@@ -1,11 +1,13 @@
+<!--
 # Inspect the "pick_and_place_exercise" Package
 >In this exercise, we will get familiar with all the files that you'll be interacting with throughout these exercises.
+-->
 
 # ピック・アンド・プレース演習パッケージ
 
 > 本演習ではこれからの演習で利用する全ファイルを導入してその構成を習熟します．
 
-## Acquire and initialize the Workspace
+<!-- ## Acquire and initialize the Workspace -->
 ## ワークスペースの作成と初期化
 ```
 cp -r ~/industrial_training/exercises/Perception-Driven_Manipulation/template_ws ~/perception_driven_ws
@@ -14,8 +16,10 @@ source /opt/ros/kinetic/setup.bash
 catkin init
 ```
 
+<!--
 ## Download source dependencies
 >Use the [wstool](http://wiki.ros.org/wstool) command to download the repositories listed in the **src/.rosinstall** file
+-->
 
 ## 依存するソースファイルのダウンロード
 > [wstool](http://wiki.ros.org/wstool) コマンドを用いて src/.rosinstall でリストアップされているリポジトリをダウンロードします．
@@ -24,9 +28,11 @@ cd ~/perception_driven_ws/src/
 wstool update
 ```
 
+<!--
 ## Download debian dependencies
 >Make sure you have installed and configured the [rosdep tool](http://wiki.ros.org/rosdep).
 >Then, run the following command from the **src** directory of your workspace.
+-->
 
 ## 依存する Debian パッケージのダウンロード
 > 前提として [rosdep tool](http://wiki.ros.org/rosdep) がインストールされていることを確認してください．
@@ -35,11 +41,13 @@ wstool update
 rosdep install --from-paths . --ignore-src -y
 ```
 
+<!--
 ## Build your workspace
 ```
 catkin build
 ```
 >If the build fails then revisit the previous two steps to make sure all the dependencies were downloaded.
+-->
 
 ## ワークスペースのビルド
 ```
@@ -47,9 +55,10 @@ catkin build
 ```
 > もしビルドが失敗するようでしたら前の2つのステップを再び行って依存関係にあるものがすべてダウンロードされていることを確認してください．
 
-
+<!--
 ## Source the workspace
 > Run the following command from your workspace parent directory
+-->
 
 ## ワークスペース設定の反映
 > ワークスペースの大本のディレクトリにて下記コマンドを実行します．
@@ -57,26 +66,27 @@ catkin build
 source devel/setup.bash
 ```
 
-
-## Locate and navigate into the package
-## 演習用パッケージディレクトリへの移動
+<!-- ## Locate and navigate into the package -->
+## 演習用パッケージディレクトリ
 ```
 cd ~/perception_driven_ws/src/collision_avoidance_pick_and_place/
 ```
 
+<!--
 ## Look into each file in the launch directory
 ```
 ur5_setup.launch     : Brings up the entire ROS system (MoveIt!, rviz, perception, ROS-I drivers, robot I/O peripherals)
 ur5_pick_and_place.launch   : Runs your pick and place node.
 ```
+-->
 
 ## launch ディレクトリの確認
 ```
-ur5_setup.launch     : ROS システム全体の起動 (MoveIt!, RViz, 認識機能, ROS-I ドライバ, ロボット入出力周辺機器)
+ur5_setup.launch     : ROS システム全体の起動（MoveIt!，RViz， 認識機能，ROS-Iドライバ，ロボット入出力周辺機器）
 ur5_pick_and_place.launch   : ピック・アンド・プレース・ノードの実行
 ```
 
-
+<!--
 ## Look into the config directory
 
 ```
@@ -87,6 +97,7 @@ ur5/
  - test_cloud_obstacle_descriptions.yaml    : Parameters used to generate simulated sensor data (simulated sensor mode only)
  - collision_obstacles.txt   : Description of each obstacle blob added to the simulated sensor data (simulated sensor mode only)
 ```
+-->
 
 ## config ディレクトリの確認
 
@@ -99,6 +110,7 @@ ur5/
  - collision_obstacles.txt   : シミュレートされたセンサ情報に加える各障害物ブロブの記述（シミュレーションセンサモードのみ）
 ```
 
+<!--
 ## Look into the src directory
 
 ```
@@ -119,6 +131,7 @@ tasks: Source files with incomplete function definitions.  You will fill with co
 utilities:  
  - pick_and_place_utilities.cpp : Contains support functions that will help you complete the exercise.
 ```
+-->
 
 ## src ディレクトリの確認
 
