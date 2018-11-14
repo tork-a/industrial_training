@@ -3,19 +3,19 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-ROS Industrial (Kinetic) Training Exercises
+ROS Industrial (Kinetic) トレーニング教材
 ===========================================
 
-Setup PC
+PCの設定
 --------
 
 .. toctree::
    :maxdepth: 1
 
-   PC Setup <_source/setup/PC-Setup---ROS-Kinetic.md>
+   PCの設定 <_source/setup/PC-Setup---ROS-Kinetic.md>
 
-Prerequisites
--------------
+準備
+----
 
 C++
 ~~~~~~~~~~~~~
@@ -26,8 +26,8 @@ C++
    MIT Introduction to C++ <http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-096-introduction-to-c-january-iap-2011/assignments/>
    Bruce Eckel Thinking in C++ <http://mindview.net/Books/TICPP/ThinkingInCPP2e.html>
 
-Linux Fundamentals
-~~~~~~~~~~~~~~~~~~
+Linuxの基礎
+~~~~~~~~~~~
 :download:`Slides <_downloads/slides/ROS-I Basic Developers Training - Session 0.pdf>`
 
 .. toctree::
@@ -37,11 +37,11 @@ Linux Fundamentals
    Exercise 0.2 - The Linux File System <_source/prerequisites/Exploring-the-Linux-File-System.md>
    Exercise 0.3 - Using the Terminal <_source/prerequisites/The-Linux-Terminal.md>
 
-Basic Topics
-------------
+基礎編
+------
 
-Session 1 - ROS Concepts and Fundamentals
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Session 1 - ROSの概念と基礎
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 :download:`Slides <_downloads/slides/ROS-I Basic Developers Training - Session 1.pdf>`
 
 .. toctree::
@@ -53,8 +53,8 @@ Session 1 - ROS Concepts and Fundamentals
    Exercise 1.3 - Packages and Nodes <_source/session1/Creating-a-ROS-Package-and-Node.md>
    Exercise 1.4 - Topics and Messages <_source/session1/Topics-and-Messages.md>
 
-Session 2 - Basic ROS Applications
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Session 2 - 基本的なROSの使用法
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 :download:`Slides <_downloads/slides/ROS-I Basic Developers Training - Session 2.pdf>`
 
 .. toctree::
@@ -65,8 +65,8 @@ Session 2 - Basic ROS Applications
    Exercise 2.2 - Launch Files <_source/session2/Launch-Files.md>
    Exercise 2.3 - Parameters <_source/session2/Parameters.md>
 
-Session 3 - Motion Control of Manipulators
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Session 3 - マニュピレータの制御
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 :download:`Slides <_downloads/slides/ROS-I Basic Developers Training - Session 3.pdf>`
 
 .. toctree::
@@ -78,8 +78,8 @@ Session 3 - Motion Control of Manipulators
    Exercise 3.3 - Build a MoveIt! Package <_source/session3/Build-a-Moveit!-Package.md>
    Exercise 3.4 - Motion Planning using RViz <_source/session3/Motion-Planning-RVIZ.md>
 
-Session 4 - Descartes and Perception
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Session 4 - Descartesパッケージと認識
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 :download:`Slides <_downloads/slides/ROS-I Basic Developers Training - Session 4.pdf>`
 
 .. toctree::
@@ -89,29 +89,29 @@ Session 4 - Descartes and Perception
    Exercise 4.1 - Intro to Descartes <_source/session4/Descartes-Path-Planning.md>
    Exercise 4.2 - Intro to Perception <_source/session4/Introduction-to-Perception.md>
 
-Application Demo 1 - Perception-Driven Manipulation
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+応用デモ 1 - センサ認識を用いたマニュピレーション
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. toctree::
    :maxdepth: 1
 
-	 Demo 1 - Perception-Driven Manipulation <_source/demo1/index.rst>
+   Demo 1 - センサ認識を用いたマニュピレーション <_source/demo1_JP/index_JP.rst>
 
 
-Application Demo 2 - Descartes Planning and Execution
+応用デモ 2 - Descartesパッケージによるプランニングと実行
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. toctree::
    :maxdepth: 1
 
-   Demo 2 - Descartes Planning and Execution <_source/demo2/index.rst>
+   Demo 2 - Descartesパッケージによるプランニングと実行 <_source/demo2_JP/index_JP.rst>
 
 
 Advanced Topics
 ---------------
 
-Session 5 - Path Planning and Building a Perception Pipeline
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Session 5 - 軌道生成と認識パイプラインの作成
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 :download:`Slides <_downloads/slides/ROS-I Advanced Developers Training - Session 5.pdf>`
 
 .. toctree::
@@ -123,8 +123,8 @@ Session 5 - Path Planning and Building a Perception Pipeline
    Exercise 5.3 - Simple PCL Interface for Python <_source/session5/Simple-PCL-Interface-for-Python.rst>
    Exercise 5.4 - OpenCV Image Processing (Python) <_source/session5/OpenCV-in-Python.md>
 
-Session 6 - Documentation, Unit Tests, ROS Utilities and Debugging ROS
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Session 6 - ドキュメント作成, ユニットテスト, ROSユーティリティ, デバッグ
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 :download:`Slides <_downloads/slides/ROS-I Advanced Developers Training - Session 5.pdf>`
 
 .. toctree::
