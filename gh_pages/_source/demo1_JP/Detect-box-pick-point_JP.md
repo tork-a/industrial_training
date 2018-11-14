@@ -4,8 +4,10 @@
 -->
 
 # 箱をつかむ位置の検出
-> 箱をつかむ座標フレームはセンサ情報処理から検出する ROS サービスから要求できます．
-> 箱をつかむ姿勢取得のための ROS サービスを呼び出すサービスクライアントの利用法について学習します．
+
+箱をつかむ座標フレームはセンサ情報処理から検出する ROS サービスから要
+求できます．箱をつかむ姿勢取得のための ROS サービスを呼び出すサービス
+クライアントの利用法について学習します．
 
 <!--
 ## Locate Function
@@ -30,7 +32,10 @@
 
 ## コードを完成させる
 
- * 各箇所にある `Fill Code:` コメントを見つけてその記述を読んでください．そして `ENTER CODE HERE` と書いてある各部分を適切なコードで書き換えてください．
+ * 各箇所にある `Fill Code:` コメントを見つけてその記述を読んでくださ
+   い．そして `ENTER CODE HERE` と書いてある各部分を適切なコードで書き
+   換えてください．
+
 ```
 /* Fill Code:
      .
@@ -41,10 +46,12 @@
 ```
 
 <!-- * The '''target_recognition_client''' object in your programs can use the '''call()''' method to send a request to a ros service. -->
- * プログラム内の `target_recognition_client` オブジェクトは `call()` メソッドを用いて ROS サービスにリクエストを送ることができます．
+
+* プログラム内の `target_recognition_client` オブジェクトは `call()` メソッドを用いて ROS サービスにリクエストを送ることができます．
 
 <!-- * The ros service that receives the call will process the sensor data and return the pose for the box pick in the service structure member '''srv.response.target_pose'''. -->
- * その ROS サービスはセンサ情報を処理してサービス構造体メンバ `srv.response.target_pose` 内の箱をつかむ姿勢を返す要求を受け取ります．
+
+* その ROS サービスはセンサ情報を処理してサービス構造体メンバ `srv.response.target_pose` 内の箱をつかむ姿勢を返す要求を受け取ります．
 
 <!--
 ## Build Code and Run
@@ -55,24 +62,31 @@
 ##  コードのビルドと実行
 
   * Qt でピック・アンド・プレース・ノードをコンパイルします．
+
 ```
 Project -> Build Project
 ```
 
 <!-- * Alternatively, in a terminal cd into the '''demo_manipulation''' directory and do the following -->
- * もしくはターミナルで本演習のワークスペースディレクトリに移動して次のコマンドを実行します．
+
+* もしくはターミナルで本演習のワークスペースディレクトリに移動して次のコマンドを実行します．
+
 ```
 catkin build --pkg collision_avoidance_pick_and_place
 ```
 
 <!-- * Run your node with the launch file: -->
- * launch ファイルでノードを実行します．
+
+* launch ファイルでノードを実行します．
+
 ```
 roslaunch collision_avoidance_pick_and_place ur5_pick_and_place.launch
 ```
 
 <!-- * A blue box and voxel grid obstacles will be displayed in rviz. In the terminal you should see a message like the following: -->
- * 1つの青い箱といくつかのボクセルグリッド障害物が RViz に表示され，ターミナルには次のようなメッセージが表示されるはずです．
+
+* 1つの青い箱といくつかのボクセルグリッド障害物が RViz に表示され，ターミナルには次のようなメッセージが表示されるはずです．
+
 ```
 [ INFO] [1400554224.057842127]: Move wait Succeeded
 [ INFO] [1400554224.311158465]: Gripper opened

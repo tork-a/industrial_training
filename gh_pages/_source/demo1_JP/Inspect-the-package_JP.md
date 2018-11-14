@@ -9,6 +9,7 @@
 
 <!-- ## Acquire and initialize the Workspace -->
 ## ワークスペースの作成と初期化
+
 ```
 cp -r ~/industrial_training/exercises/Perception-Driven_Manipulation/template_ws ~/perception_driven_ws
 cd ~/perception_driven_ws
@@ -22,7 +23,9 @@ catkin init
 -->
 
 ## 依存するソースファイルのダウンロード
-> [wstool](http://wiki.ros.org/wstool) コマンドを用いて src/.rosinstall でリストアップされているリポジトリをダウンロードします．
+
+[wstool](http://wiki.ros.org/wstool) コマンドを用いて src/.rosinstall でリストアップされているリポジトリをダウンロードします．
+
 ```
 cd ~/perception_driven_ws/src/
 wstool update
@@ -35,8 +38,10 @@ wstool update
 -->
 
 ## 依存する Debian パッケージのダウンロード
-> 前提として [rosdep tool](http://wiki.ros.org/rosdep) がインストールされていることを確認してください．
+
+前提として [rosdep tool](http://wiki.ros.org/rosdep) がインストールされていることを確認してください．
 > 確認できましたらワークスペース内の **src** ディレクトリで下記コマンドを実行してください．
+
 ```
 rosdep install --from-paths . --ignore-src -y
 ```
@@ -50,10 +55,11 @@ catkin build
 -->
 
 ## ワークスペースのビルド
+
 ```
 catkin build
 ```
-> もしビルドが失敗するようでしたら前の2つのステップを再び行って依存関係にあるものがすべてダウンロードされていることを確認してください．
+もしビルドが失敗するようでしたら前の2つのステップを再び行って依存関係にあるものがすべてダウンロードされていることを確認してください．
 
 <!--
 ## Source the workspace
@@ -61,13 +67,16 @@ catkin build
 -->
 
 ## ワークスペース設定の反映
-> ワークスペースの大本のディレクトリにて下記コマンドを実行します．
+
+ワークスペースの大本のディレクトリにて下記コマンドを実行します．
+
 ```
 source devel/setup.bash
 ```
 
 <!-- ## Locate and navigate into the package -->
 ## 演習用パッケージディレクトリ
+
 ```
 cd ~/perception_driven_ws/src/collision_avoidance_pick_and_place/
 ```
@@ -81,6 +90,7 @@ ur5_pick_and_place.launch   : Runs your pick and place node.
 -->
 
 ## launch ディレクトリの確認
+
 ```
 ur5_setup.launch     : ROS システム全体の起動（MoveIt!，RViz， 認識機能，ROS-Iドライバ，ロボット入出力周辺機器）
 ur5_pick_and_place.launch   : ピック・アンド・プレース・ノードの実行

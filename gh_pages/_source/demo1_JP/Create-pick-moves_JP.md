@@ -4,6 +4,7 @@
 -->
 
 # つかみ上げ動作の生成
+
 > グリッパは箱をつかみ上げるためのそれぞれの姿勢 : アプローチ・置く・後退 に動きます．
 > 本演習ではそれらのツール中心位置 (Tool Center Point : TCP) 座標系におけるつかみ上げ動作を生成して，その後にそれらの姿勢を手首フレーム座標系に変換します．
 
@@ -31,6 +32,7 @@
 ## コードを完成させる
 
  * 各箇所にある `Fill Code:` コメントを見つけてその記述を読んでください．そして `ENTER CODE HERE` と書いてある各部分を適切なコードで書き換えてください．
+
 ```
 /* Fill Code:
      .
@@ -41,6 +43,7 @@
 ```
 
 <!--  * The '''create_manipulation_poses()''' uses the values of the approach and retreat distances in order to create the corresponding poses at the desired target. -->
+
  * `create_manipulation_poses()` は意図した目標にに対応するポーズを生成するためにアプローチと後退の距離を使用します．
 <!--  * Since moveit plans the robot path for the arm's wrist, then it is necessary to convert all the pick poses to the wrist coordinate frame. -->
  * MoveIt! がロボットの手首の軌道を計算するので，全てのつかむための姿勢が手首フレームの座標系に変換される必要があります．
@@ -56,12 +59,15 @@
 ##  コードのビルドと実行
 
   * Qt でピック・アンド・プレース・ノードをコンパイルします．
+
 ```
 Project -> Build Project
 ```
 
 <!--  * Alternatively, in a terminal cd into the '''demo_manipulation''' directory and do the following -->
-  * もしくはターミナルで本演習のワークスペースディレクトリに移動して次のコマンドを実行します．
+
+* もしくはターミナルで本演習のワークスペースディレクトリに移動して次のコマンドを実行します．
+
 ```
 catkin build --cmake-args -G 'CodeBlocks - Unix Makefiles' --pkg collision_avoidance_pick_and_place
 source ./devel/setup.bash
@@ -69,12 +75,14 @@ source ./devel/setup.bash
 
   * Run your node with the launch file:
   * launch ファイルでノードを実行します．
+
 ```
 roslaunch collision_avoidance_pick_and_place ur5_pick_and_place.launch
 ```
 
 <!--  * The tcp and wrist position at the pick will be printed in the terminal. You should see something like this: -->
   * 次のようにツール中心姿勢とつかむ動作の手首位置がターミナルに表示されるはずです．  
+
 ```
 [ INFO] [1400555434.918332145]: Move wait Succeeded
 [ INFO] [1400555435.172714267]: Gripper opened

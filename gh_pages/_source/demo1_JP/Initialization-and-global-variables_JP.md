@@ -1,53 +1,13 @@
-<!--
-# Initialization and Global Variables
->In this exercise, we will take a first look at the main application "pick_and_place_node.cpp", its public variables, and how to properly initialize it as a ros node.
--->
-
 # 初期化とグローバル変数
-> メインアプリケーション "pick_and_place_node.cpp" において，パブリック変数にどのようなものがあるのか，アプリケーションが ROS ノードとしてどのように適切に初期化されているのかを見てみます．
 
-<!--
-## Application Variables
-
-  In QT, open
-```
-[Source directory]/collision_avoidance_pick_and_place/include/collision_avoidance_pick_and_place/pick_and_place_utilities.h
-```
-The c++ class 'pick_and_place_config' defines public global variables used in various parts of the program.
-  These variables
-
-```
-    ARM_GROUP_NAME  = "manipulator";
-    TCP_LINK_NAME   = "tcp_frame";
-    MARKER_TOPIC = "pick_and_place_marker";
-    PLANNING_SCENE_TOPIC = "planning_scene";
-    TARGET_RECOGNITION_SERVICE = "target_recognition";
-    MOTION_PLAN_SERVICE = "plan_kinematic_path";
-    WRIST_LINK_NAME = "ee_link";
-    ATTACHED_OBJECT_LINK_NAME = "attached_object_link";
-    WORLD_FRAME_ID  = "world_frame";
-    HOME_POSE_NAME  = "home";
-    WAIT_POSE_NAME  = "wait";
-    AR_TAG_FRAME_ID    = "ar_frame";
-    GRASP_ACTION_NAME = "grasp_execution_action";
-    BOX_SIZE        = tf::Vector3(0.1f, 0.1f, 0.1f);
-    BOX_PLACE_TF    = tf::Transform(tf::Quaternion::getIdentity(), tf::Vector3(-0.8f,-0.2f,BOX_SIZE.getZ()));
-    TOUCH_LINKS = std::vector<std::string>();
-    RETREAT_DISTANCE  = 0.05f;
-    APPROACH_DISTANCE = 0.05f;
-```
-
-  In the main program ('''pick_and_place_node.cpp'''), the global '''application''' object provides access to the program variables through its '''cfg''' member.  For instance, in order to use the
-  "WORLD_FRAME_ID" global variable we would do the following:
-
-```
-ROS_INFO_STREAM("world frame: " << application.cfg.WORLD_FRAME_ID)
-```
--->
+メインアプリケーション "pick_and_place_node.cpp" において，パブリック
+変数にどのようなものがあるのか，アプリケーションが ROS ノードとしてど
+のように適切に初期化されているのかを見てみます．
 
 ## アプリケーション変数
 
 QT などで下記のファイルを開いてください．
+
 ```
 [Source directory]/collision_avoidance_pick_and_place/include/collision_avoidance_pick_and_place/pick_and_place_utilities.h
 ```
@@ -76,22 +36,20 @@ C++ のクラス '''pick_and_place_config''' でパブリックグローバル�
     APPROACH_DISTANCE = 0.05f;
 ```
 
-メインプログラム `pick_and_place_node.cpp` において，グローバルオブジェクト `application` はメンバ `cfg` を通じてプログラムの変数へのアクセスを提供しています．
-例えば `WORLD_FRAME_ID` を利用したい場合は次のように行います．
+メインプログラム `pick_and_place_node.cpp` において，グローバルオブジェ
+クト `application` はメンバ `cfg` を通じてプログラムの変数へのアクセス
+を提供しています．例えば `WORLD_FRAME_ID` を利用したい場合は次のように
+行います．
 
 ```
 ROS_INFO_STREAM("world frame: " << application.cfg.WORLD_FRAME_ID)
 ```
 
-<!--
-## Node Initialization
-
-  In the '''pick_and_place_node.cpp''' file,  the following block of code in the "main" function initializes the '''!PickAndPlace''' application class and its main ros and MoveIt! components.
--->
-
 ## ノードの初期化
 
-`pick_and_place_node.cpp` ファイルにおいて `main` 関数が `PickAndPlace` アプリケーションクラスとその ROS と MoveIt! コンポーネントを初期化しています．
+`pick_and_place_node.cpp` ファイルにおいて `main` 関数が
+`PickAndPlace` アプリケーションクラスとその ROS と MoveIt! コンポーネ
+ントを初期化しています．
 
 ```
 int main(int argc,char** argv)

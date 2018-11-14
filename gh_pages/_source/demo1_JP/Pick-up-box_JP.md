@@ -32,6 +32,7 @@
 ## コードを完成させる
 
  * 各箇所にある `Fill Code:` コメントを見つけてその記述を読んでください．そして `ENTER CODE HERE` と書いてある各部分を適切なコードで書き換えてください．
+
 ```
 /* Fill Code:
      .
@@ -59,23 +60,28 @@
 ##  コードのビルドと実行
 
   * Qt でピック・アンド・プレース・ノードをコンパイルします．
+
 ```
 Project -> Build Project
 ```
 
 <!--  * Alternatively, in a terminal cd into the '''demo_manipulation''' directory and do the following -->
   * もしくはターミナルで本演習のワークスペースディレクトリに移動して次のコマンドを実行します．
+
 ```
 catkin build --cmake-args -G 'CodeBlocks - Unix Makefiles' --pkg collision_avoidance_pick_and_place
 ```
 
 <!--  * Run your node with the launch file: -->
   * launch ファイルでノードを実行します．
+
 ```
 roslaunch collision_avoidance_pick_and_place ur5_pick_and_place.launch
 ```
+
 <!--  * The robot should go through the pick moves (Approach, pick and retreat) in addition to the moves from the previous exercises. In the terminal you will see something like: -->
   * 前回の演習に加えてロボットがつかむ動作群（アプローチ・つかみ・後退）を実行し，ターミナルには次のように表示されるはずです．
+
 ```
 [ INFO] [1400555978.404435764]: Execution completed: SUCCEEDED
 [ INFO] [1400555978.404919764]: Pick Move 2 Succeeded
