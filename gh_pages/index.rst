@@ -12,7 +12,7 @@ PCの設定
 .. toctree::
    :maxdepth: 1
 
-   PCの設定 <_source/setup/PC-Setup---ROS-Kinetic.md>
+   PCの設定 <_source/setup_JP/PC-Setup---ROS-Kinetic_JP.md>
 
 準備
 ----
@@ -33,9 +33,9 @@ Linuxの基礎
 .. toctree::
    :maxdepth: 1
 
-   Exercise 0.1 - Intro to Ubuntu GUI <_source/prerequisites/Navigating-the-Ubuntu-GUI.md>
-   Exercise 0.2 - The Linux File System <_source/prerequisites/Exploring-the-Linux-File-System.md>
-   Exercise 0.3 - Using the Terminal <_source/prerequisites/The-Linux-Terminal.md>
+   Exercise 0.1 - Intro to Ubuntu GUI <_source/prerequisites_JP/Navigating-the-Ubuntu-GUI_JP.md>
+   Exercise 0.2 - The Linux File System <_source/prerequisites_JP/Exploring-the-Linux-File-System_JP.md>
+   Exercise 0.3 - Using the Terminal <_source/prerequisites_JP/The-Linux-Terminal_JP.md>
 
 基礎編
 ------
@@ -47,11 +47,11 @@ Session 1 - ROSの概念と基礎
 .. toctree::
    :maxdepth: 1
 
-   Exercise 1.0 - ROS Setup <_source/session1/ROS-Setup.md>
-   Exercise 1.1 - Create a Workspace <_source/session1/Create-Catkin-Workspace.md>
-   Exercise 1.2 - Installing Packages <_source/session1/Installing-Existing-Packages.md>
-   Exercise 1.3 - Packages and Nodes <_source/session1/Creating-a-ROS-Package-and-Node.md>
-   Exercise 1.4 - Topics and Messages <_source/session1/Topics-and-Messages.md>
+   Exercise 1.0 - ROS Setup <_source/session1_JP/ROS-Setup_JP.md>
+   Exercise 1.1 - Create a Workspace <_source/session1_JP/Create-Catkin-Workspace_JP.md>
+   Exercise 1.2 - Installing Packages <_source/session1_JP/Installing-Existing-Packages_JP.md>
+   Exercise 1.3 - Packages and Nodes <_source/session1_JP/Creating-a-ROS-Package-and-Node_JP.md>
+   Exercise 1.4 - Topics and Messages <_source/session1_JP/Topics-and-Messages_JP.md>
 
 Session 2 - 基本的なROSの使用法
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -60,10 +60,10 @@ Session 2 - 基本的なROSの使用法
 .. toctree::
    :maxdepth: 1
 
-   Exercise 2.0 - Services <_source/session2/Services.md>
-   Exercise 2.1 - Actions <_source/session2/Actions.md>
-   Exercise 2.2 - Launch Files <_source/session2/Launch-Files.md>
-   Exercise 2.3 - Parameters <_source/session2/Parameters.md>
+   Exercise 2.0 - Services <_source/session2_JP/Services_JP.md>
+   Exercise 2.1 - Actions <_source/session2_JP/Actions_JP.md>
+   Exercise 2.2 - Launch Files <_source/session2_JP/Launch-Files_JP.md>
+   Exercise 2.3 - Parameters <_source/session2_JP/Parameters_JP.md>
 
 Session 3 - マニュピレータの制御
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -72,11 +72,11 @@ Session 3 - マニュピレータの制御
 .. toctree::
    :maxdepth: 1
 
-   Exercise 3.0 - Intro to URDF <_source/session3/Intro-to-URDF.md>
-   Exercise 3.1 - Workcell XACRO <_source/session3/Workcell-XACRO.md>
-   Exercise 3.2 - Transforms using TF <_source/session3/Coordinate-Transforms-using-TF.md>
-   Exercise 3.3 - Build a MoveIt! Package <_source/session3/Build-a-Moveit!-Package.md>
-   Exercise 3.4 - Motion Planning using RViz <_source/session3/Motion-Planning-RVIZ.md>
+   Exercise 3.0 - Intro to URDF <_source/session3_JP/Intro-to-URDF_JP.md>
+   Exercise 3.1 - Workcell XACRO <_source/session3_JP/Workcell-XACRO_JP.md>
+   Exercise 3.2 - Transforms using TF <_source/session3_JP/Coordinate-Transforms-using-TF_JP.md>
+   Exercise 3.3 - Build a MoveIt! Package <_source/session3_JP/Build-a-Moveit!-Package_JP.md>
+   Exercise 3.4 - Motion Planning using RViz <_source/session3_JP/Motion-Planning-RVIZ_JP.md>
 
 Session 4 - Descartesパッケージと認識
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -85,9 +85,9 @@ Session 4 - Descartesパッケージと認識
 .. toctree::
    :maxdepth: 1
 
-   Exercise 4.0 - Motion Planning using C++ <_source/session4/Motion-Planning-CPP.md>
-   Exercise 4.1 - Intro to Descartes <_source/session4/Descartes-Path-Planning.md>
-   Exercise 4.2 - Intro to Perception <_source/session4/Introduction-to-Perception.md>
+   Exercise 4.0 - Motion Planning using C++ <_source/session4_JP/Motion-Planning-CPP_JP.md>
+   Exercise 4.1 - Intro to Descartes <_source/session4_JP/Descartes-Path-Planning_JP.md>
+   Exercise 4.2 - Intro to Perception <_source/session4_JP/Introduction-to-Perception_JP.md>
 
 応用デモ 1 - センサ認識を用いたマニュピレーション
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
