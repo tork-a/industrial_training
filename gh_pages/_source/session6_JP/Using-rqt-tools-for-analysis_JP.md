@@ -1,9 +1,9 @@
 # rqt 分析ツール
 
 > 本演習では ROS システムの動作を理解するために
-  rqt_console ,
   rqt_graph ,
-  urdf_to_graphviz
+  rqt_console ,
+  rqt_plot
   を使ってみます．
 
 
@@ -31,7 +31,7 @@ Scan-N-Plan アプリケーションは完了しました．
 
 複雑なアプリケーションでは ROS ノードの相互作用の状況を視覚的に表示すると便利です．
 
- 1. Scan-N-Plan ワークセルの起動をします．
+ 1. Scan-N-Plan ワークセルを起動します．
 
  ```
  roslaunch myworkcell_support setup.launch

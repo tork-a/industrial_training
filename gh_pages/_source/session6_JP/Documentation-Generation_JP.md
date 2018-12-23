@@ -3,13 +3,13 @@
 ## モチベーション
 
 ROS Scan-N-Plan アプリケーションを完成させテストを行いました．
-他の開発者がこのプログラムを容易に理解できるように，
+他の開発者がこのプログラムを簡単に理解できるように，
 そのコードを完全に文書化することが重要です．
 
 
 ## 情報とリソース
 
-* [doxygen generates documentation from annotated source code](http://www.doxygen.org/)
+* [Doxygen - Generate documentation from source code](http://www.doxygen.org/)
 * [rosdoc_lite is a ROS wrapper for doxygen](http://wiki.ros.org/rosdoc_lite)
 
 

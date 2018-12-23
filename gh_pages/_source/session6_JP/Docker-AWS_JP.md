@@ -1,6 +1,6 @@
 # ROS と Docker / Amazon Web Service
 
-## デモ #1 - フロントエンド: Gazebo ホスト / バックエンド: Docker
+## デモ #1 - フロントエンド: ホスト Gazebo / バックエンド: Docker
 
 ### ワークスペースのセットアップ
 
@@ -23,8 +23,10 @@ catkin build fetch_gazebo fetch_description
 
 このステップでは必要な実行可能ファイルを含む Docker イメージを作成します．
 
- - rosindustrial/core:indigo イメージ内で /bin/bash を実行してから apt-get でパッケージを取得
- - rosindustrial/core:indigo イメージ内で /bin/bash を実行してからソースからパッケージをビルドして，その結果をコミット
+ - rosindustrial/core:indigo イメージ内で /bin/bash を実行してから
+   apt-get でパッケージを取得
+ - rosindustrial/core:indigo イメージ内で /bin/bash を実行してから
+   ソースからパッケージをビルドして，その結果をコミット
  - fetch ロボットの Dockerfile で Docker コンテナを作成し，それを実行
    https://gist.github.com/AustinDeric/242c1edf1c934406f59dfd078a0ce7fa
 
@@ -46,10 +48,6 @@ roslaunch fetch_gazebo playground.launch
 ```
 
 #### バックエンドの実行
-
-There are multiple ways to perform this:
- - run /bin/bash in the fetch container and manually run the demo node.
- - run the demo node directly in the container, which is the method we will perform
 
 これを実行するには複数の方法があります．
 

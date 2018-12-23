@@ -2,11 +2,10 @@
 
 ## モチベーション
 
- - MoveIt! を通じて
-   STOMP
+ - STOMP
    ( Stochastic Trajectory Optimization for Motion Planning /
    運動計画のための確率的軌道最適化 )
-   を用いた動作計画方法の学習
+   を利用した MoveIt! での動作計画方法の学習
 
 
 ## 情報とリソース
@@ -17,10 +16,9 @@
 
 ## 目標
 
-* moveit_config パッケージにファイルを追加・変更して MoveIt! に STOMP を統合する．
-* 次に
-  [RViz Motion Planning Plugin](http://docs.ros.org/hydro/api/moveit_ros_visualization/html/doc/tutorial.html)
-  から STOMP 動作計画を生成します．
+* moveit_config パッケージにファイルを追加・変更して MoveIt! に STOMP を統合
+* [RViz Motion Planning Plugin](http://docs.ros.org/hydro/api/moveit_ros_visualization/html/doc/tutorial.html)
+  で STOMP を用いた動作計画の生成
 
 
 ## セットアップ
@@ -44,6 +42,7 @@
     ```
     cd ~/catkin_ws/src
     git clone https://github.com/ros-industrial/industrial_moveit.git
+    cd ~/catkin_ws/src/industrial_moveit
     git checkout kinetic-devel
     ```
 
