@@ -33,33 +33,33 @@ Scan-N-Plan アプリケーションは完了しました．
 
  1. Scan-N-Plan ワークセルを起動します．
 
- ```
- roslaunch myworkcell_support setup.launch
- ```
+    ```
+    roslaunch myworkcell_support setup.launch
+    ```
 
  1. 2つ目のターミナルで rqt_graph を起動します．
 
- ```
- rqt_graph
- ```
+    ```
+    rqt_graph
+    ```
 
  1. これで Scan-N-Plan アプリケーションの基本的なレイアウトを見ることができます．
 
- ![](../../_static/basic_rqt_graph.png)
+    ![](../../_static/basic_rqt_graph.png)
 
  1. 3つ目のターミナルで直交座標系動作軌道プランナを実行します．
 
- ```
- rosrun myworkcell_core myworkcell_node
- ```
+    ```
+    rosrun myworkcell_core myworkcell_node
+    ```
 
  1. グラフが自動的に更新されないため，ノードの実行中にグラフを更新する必要があります．
 
- 更新すると ROS ネットワークに myworkcell_node が含まれている表示がされるはずです．
- また，myworkcell_node は move_group ノードによって購読される
- 新しいトピック `/move_group/goal` をパブリッシュしています．
+    更新すると ROS ネットワークに myworkcell_node が含まれている表示がされるはずです．
+    また，myworkcell_node は move_group ノードによって購読される
+    新しいトピック `/move_group/goal` をパブリッシュしています．
 
- ![](../../_static/planned_rqt_graph.png)
+    ![](../../_static/planned_rqt_graph.png)
 
 
 ### rqt_console : メッセージの表示
@@ -70,21 +70,21 @@ rqt_console は ROS トピックを表示するための優れた GUI です．
  1. 2つ目のターミナルで rqt_graph アプリケーションを停止して
     rqt_console を実行します．
 
- ```
- rqt_console
- ```
+    ```
+    rqt_console
+    ```
 
  1. 動作軌道プランナを実行します．
 
- ```
- rosrun myworkcell_core myworkcell_node
- ```
+    ```
+    rosrun myworkcell_core myworkcell_node
+    ```
 
  1. rqt_console は自動的に更新されます．
 
     次のように動作軌道プランナの背後にあるロジックが表示されるはずです．
 
- ![](../../_static/rqt_console_output.png)
+    ![](../../_static/rqt_console_output.png)
 
 
 ### `rqt_plot`: データのプロット表示
@@ -95,27 +95,27 @@ rqt_console は ROS トピックを表示するための優れた GUI です．
  1. 2つ目のターミナルで rqt_console アプリケーションを停止して
     rqt_plot を実行します．
 
- ```
- rqt_plot
- ```
+    ```
+    rqt_plot
+    ```
 
  1. `Topic` 欄に下記のトピックを追加します．
 
- ```
- /joint_states/position[0]
- /joint_states/position[1]
- /joint_states/position[2]
- /joint_states/position[3]
- /joint_states/position[4]
- /joint_states/position[5]
- ```
+    ```
+    /joint_states/position[0]
+    /joint_states/position[1]
+    /joint_states/position[2]
+    /joint_states/position[3]
+    /joint_states/position[4]
+    /joint_states/position[5]
+    ```
 
  3. 動作軌道プランナを実行します．
 
- ```
- rosrun myworkcell_core myworkcell_node
- ```
+    ```
+    rosrun myworkcell_core myworkcell_node
+    ```
 
  4. 関節角度がリアルタイムでストリーミングされ，プロットされているはずです．
 
- ![](../../_static/plot.png)
+    ![](../../_static/plot.png)
