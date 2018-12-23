@@ -110,12 +110,12 @@ rqt_console は ROS トピックを表示するための優れた GUI です．
     /joint_states/position[5]
     ```
 
- 3. 動作軌道プランナを実行します．
+ 1. 動作軌道プランナを実行します．
 
     ```
     rosrun myworkcell_core myworkcell_node
     ```
 
- 4. 関節角度がリアルタイムでストリーミングされ，プロットされているはずです．
+ 1. 関節角度がリアルタイムでストリーミングされ，プロットされているはずです．
 
-    ![](../../_static/plot.png)
+ ![](../../_static/plot.png)
