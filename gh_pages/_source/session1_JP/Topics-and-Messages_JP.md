@@ -23,7 +23,7 @@
 * [シンプルな配信者(Publisher)と購読者(Subscriber)を書く(C++)](http://wiki.ros.org/ja/ROS/Tutorials/WritingPublisherSubscriber(c%2B%2B))
 
 
-# 追加情報とリソース
+## 追加情報とリソース
 
 * [Understanding ROS Topics](http://wiki.ros.org/ROS/Tutorials/UnderstandingTopics)
 * [Examining the Simple Publisher and Subscriber](http://wiki.ros.org/ROS/Tutorials/ExaminingPublisherSubscriber)

@@ -7,7 +7,7 @@
 スタイルガイドに従ってコードをクリーンアップする必要があります．
 
 
-# 情報とリソース
+## 情報とリソース
 
 * [ROS C++ Style Guide](http://wiki.ros.org/CppStyleGuide)
 * [Automated Style Guide Enforcement](http://wiki.ros.org/roslint)
