@@ -94,6 +94,12 @@ Python ノードから呼び出す準備は整っています．
             cd ~/python-pcl_ws/src/
             catkin_create_pkg filter_call rospy roscpp perception_msgs
 
+   .. Note:: 訳注 - 後述されますが今回 perception_msgs は使用せず，
+             ビルドや実行時にエラーが出ることがあります．
+             その場合は CMakeList.text と package.xml 内の
+             perception_msgs に関する依存関係の記述部分を
+             コメントアウトして無効化してください．
+
 #. パッケージが新しく作成できたことを確認します．
 
    .. code-block:: bash
@@ -105,7 +111,7 @@ Python ノードから呼び出す準備は整っています．
 それは更に学習が進んだ時点で学んでください．
 カスタム・メッセージを実装する方法を含め，より深い説明が必要な場合は
 ここに良い
-`MIT Resource <http://duckietown.mit.edu/media/pdfs/1rpRisFoCYUm0XT78j-nAYidlh-cDtLCdEbIaBCnx9ew.pdf> `__
+`MIT Resource <http://duckietown.mit.edu/media/pdfs/1rpRisFoCYUm0XT78j-nAYidlh-cDtLCdEbIaBCnx9ew.pdf>`__
 がありあす．
 
 #. *CMakeLists.txt* を開いてください．
