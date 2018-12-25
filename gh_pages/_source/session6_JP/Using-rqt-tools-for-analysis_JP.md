@@ -87,7 +87,7 @@ rqt_console は ROS トピックを表示するための優れた GUI です．
     ![](../../_static/rqt_console_output.png)
 
 
-### `rqt_plot`: データのプロット表示
+### rqt_plot: データのプロット表示
 
  rqt_plot は ROS データをリアルタイムでプロットする簡単な方法です．
  ここの例では動作軌道計画からロボットの関節角度をプロットします．
