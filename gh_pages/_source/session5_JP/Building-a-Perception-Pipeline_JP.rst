@@ -104,7 +104,6 @@ ROS ノードの大半は既に完成していますので，
 
 #. PointCloud2 の変換（ while ループ内 ）:
 
-   * While we could work in the camera frame, things are more understandable/useful if we are looking at the points of a point cloud in an xyz space that makes more sense with our environment. In this case we are transforming the points from the camera frame to a world frame.
    * カメラフレーム上で作業することも可能ですが，
      XYZ 空間上でポイントクラウドの点を見た方がより理解しやすく便利です．
      そのために点群をカメラフレームからワールドフレームに変換しています．
@@ -358,10 +357,6 @@ Voxel フィルタの実装
         ROS_WARN_STREAM ("Could not estimate a planar model for the given dataset.") ;
         //break;
       }
-
-   Once you have the inliers (points which fit the plane model),
-   then you can extract the indices within the pointcloud data structure of the points
-   which make up the plane.
 
    平面モデルに合致した点を取得したら，
    平面を構成するポイント群のポイントクラウドデータ構造内の
@@ -633,8 +628,6 @@ Voxel フィルタの実装
 
       sor.filter (*sor_cloud_filtered);
 
-#. Find the ``pcl::toROSMsg`` call where the ``pc2_cloud`` is populated.  Replace the current cloud with the new filtered results (``*sor_cloud_filtered``).
-
 #. ``pc2_cloud`` が入力されている ``pcl::toROSMsg`` 呼び出し部分を探してください．
    現在のクラウドを
    新しいフィルタ結果の（
@@ -700,124 +693,6 @@ TF のブロードキャストの作成
 #. いつものようにコンパイルと実行をしてください．
    RViz の Display に TF を追加して，
    箱の上部に位置づけられた TF "part" を表示します．
-
-
-Create a Polygonal Segmentation
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-When using sensor data for collision detection, it is sometimes necessary to exclude "known" objects from the scene to avoid interference from these objects.  MoveIt! contains methods for masking out a robot's own geometry as a "Self Collision" filtering feature.  This example shows how to do something similar using PCL's Polygonal Segmentation filtering.
-
-#. Change code
-
-   This method is similar to the plane segmentation from Sub-Task 3, but instead of segmenting out a plane, you can segment and remove a prism. Documentation on the PCL Polygonal Segmentation can be found `here <http://docs.pointclouds.org/1.7.0/classpcl_1_1_convex_hull.html>`__ and `here <http://docs.pointclouds.org/trunk/classpcl_1_1_extract_polygonal_prism_data.html>`__. The goal in this sub-task is to remove the points that correspond to a known object (e.g. the box we detected earlier). This particular filter is applied to the entire point cloud (original sensor data), but only after we've already completed the processing steps to identify the position/orientation of the box.
-
-   Within perception_node.cpp, add ``#include <tf_conversions/tf_eigen.h>`` and find section
-
-   .. code-block:: c++
-
-      /* ========================================
-       * Fill Code: POLYGONAL SEGMENTATION (OPTIONAL)
-       * ========================================*/
-
-   Set the input cloud:
-
-   .. code-block:: c++
-
-      pcl::PointCloud<pcl::PointXYZ>::Ptr sensor_cloud_ptr (new pcl::PointCloud<pcl::PointXYZ>(cloud));
-      pcl::PointCloud<pcl::PointXYZ>::Ptr prism_filtered_cloud (new pcl::PointCloud<pcl::PointXYZ>);
-      pcl::PointCloud<pcl::PointXYZ>::Ptr pick_surface_cloud_ptr(new pcl::PointCloud<pcl::PointXYZ>);
-
-   Declare instance of filter:
-
-   .. code-block:: c++
-
-      pcl::ExtractPolygonalPrismData<pcl::PointXYZ> prism;
-
-   Set extraction indices:
-
-   .. code-block:: c++
-
-      pcl::ExtractIndices<pcl::PointXYZ> extract_ind;
-
-   Set input and output:
-
-   .. code-block:: c++
-
-      prism.setInputCloud(sensor_cloud_ptr);
-      pcl::PointIndices::Ptr pt_inliers (new pcl::PointIndices());
-
-   Set parameters - looking at documentation, ExtractPolygonalPrismData uses a pointcloud defining the polygon vertices as its input.
-
-   .. code-block:: c++
-
-      // create prism surface
-      double box_length=0.25;
-      double box_width=0.25;
-      pick_surface_cloud_ptr->width = 5;
-      pick_surface_cloud_ptr->height = 1;
-      pick_surface_cloud_ptr->points.resize(5);
-
-      pick_surface_cloud_ptr->points[0].x = 0.5f*box_length;
-      pick_surface_cloud_ptr->points[0].y = 0.5f*box_width;
-      pick_surface_cloud_ptr->points[0].z = 0;
-
-      pick_surface_cloud_ptr->points[1].x = -0.5f*box_length;
-      pick_surface_cloud_ptr->points[1].y = 0.5f*box_width;
-      pick_surface_cloud_ptr->points[1].z = 0;
-
-      pick_surface_cloud_ptr->points[2].x = -0.5f*box_length;
-      pick_surface_cloud_ptr->points[2].y = -0.5f*box_width;
-      pick_surface_cloud_ptr->points[2].z = 0;
-
-      pick_surface_cloud_ptr->points[3].x = 0.5f*box_length;
-      pick_surface_cloud_ptr->points[3].y = -0.5f*box_width;
-      pick_surface_cloud_ptr->points[3].z = 0;
-
-      pick_surface_cloud_ptr->points[4].x = 0.5f*box_length;
-      pick_surface_cloud_ptr->points[4].y = 0.5f*box_width;
-      pick_surface_cloud_ptr->points[4].z = 0;
-
-      Eigen::Affine3d eigen3d;
-      tf::transformTFToEigen(part_transform,eigen3d);
-      pcl::transformPointCloud(*pick_surface_cloud_ptr,*pick_surface_cloud_ptr,Eigen::Affine3f(eigen3d));
-
-      prism.setInputPlanarHull( pick_surface_cloud_ptr);
-      prism.setHeightLimits(-10,10);
-
-   Segment:
-
-   .. code-block:: c++
-
-      prism.segment(*pt_inliers);
-
-   Remember that after you use the segmentation algorithme that you either want to include or exclude the segmented points using an index extraction.
-
-   Set input:
-
-   .. code-block:: c++
-
-      extract_ind.setInputCloud(sensor_cloud_ptr);
-      extract_ind.setIndices(pt_inliers);
-
-   This time, we invert the index extraction, so that we remove points inside the filter and keep points outside the filter.
-
-   .. code-block:: c++
-
-      extract_ind.setNegative(true);
-
-   Filter:
-
-   .. code-block:: c++
-
-      extract_ind.filter(*prism_filtered_cloud);
-
-#. Find the ``pcl::toROSMsg`` call where the ``pc2_cloud`` is populated.  This is the point cloud that is published to RViz display.  Replace the current cloud with the new filtered results (``*prism_filtered_cloud``).
-
-#. Compile and run as before.
-
-    .. image:: /_static/prism_filtered_cloud.png
-
-   .. Note:: Notice that the target box has been removed from the point cloud display.
 
 
 ポリゴン・セグメンテーションの作成

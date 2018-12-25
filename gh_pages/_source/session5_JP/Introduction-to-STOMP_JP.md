@@ -270,14 +270,3 @@
 1. RViz ウィンドウに戻って，
    任意の "Start" と "Goal" の位置を選択して，
    変更が動作計画のパフォーマンスに与える影響を確認してください．
-
-<!--
-### More info on the STOMP parameters
-
- The [STOMP wiki]() explains these parameter in more detail.
-
-
-### STOMP パラメータに関するより詳しい情報
-
- [STOMP Wiki]() は、これらのパラメータについて詳しく説明しています。
--->

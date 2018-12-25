@@ -162,7 +162,7 @@ Scan-N-Plan プログラムを完成して文書化しました．
 #. rostest パッケージには基本的なトピックの特性を検査するためのいくつかのツールがあります．
    `hztest <http://wiki.ros.org/rostest/Nodes#hztest>`__ や
    `paramtest <http://wiki.ros.org/rostest/Nodes# paramtest>`__ ，
-   `publishtest <http://wiki.ros.org/rostest/Nodes#publishtest> `__ です．
+   `publishtest <http://wiki.ros.org/rostest/Nodes#publishtest>`__ です．
    ``fake_ar_publisher`` ノードが
    期待するトピックを出力していることを検証するための
    基本的なテストをいくつか追加します。
